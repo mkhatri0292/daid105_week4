@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> <h1>Khatri Cafe</h1>
+    <title>Khatri Cafe</title>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+        <li>Home</li>
+        <li>Beverages</li>
+        <li>Food</li>
+        <li>Location</li>
+        <li>About</li>
+    </ul>
+</nav>
+
+<!-- Beverages section -->
+<section>
+    <h1>Beverages</h1>
+    <p>Come join us to enjoy selection of hot beverages, made fresh with best ingredients and love!
+    </p>
+    <aside>
+        <img src="coffee.jpg" alt="">
+    </aside>
+</section>
+
+<!-- Food section -->
+<section>
+    <h1>Food</h1>
+    <p>We not only serve hot beverages, but also light snack to tease your apetite.</p>
+    <img src="food.jpg" alt="">
+</section>
+
+<!-- Facilities section -->
+<section>
+    <h1>Facilities</h1>
+    <p>Come and experience our coffee houses with free parking, free wifi and soft music.
+        We serve selection of gourmet beverages, pastries, sandwiches, salads and bottled drinks</p>
+    <img src="tables.jpg" alt="">
+</section>
+
+<aside>
+    <h1>Locations</h1>
+    <p>Find the nearest cafe here</p>
+    <p>Click the button to find nearest location.</p>
+
+<button onclick="getLocation()">Find</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</aside>
+
+<footer>
+<p>A lot can happen over coffee!</p>
+</footer>
+
+</body>
